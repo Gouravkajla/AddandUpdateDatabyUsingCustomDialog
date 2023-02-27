@@ -42,8 +42,8 @@ var userlist=ArrayList<String>()
                 val dialogbinding = CustomdialogaddBinding.inflate(layoutInflater)
                 customDialogg.setContentView(dialogbinding.root)
                 dialogbinding.btnAdd.setOnClickListener {
-                    if (dialogbinding.btnAdd.text.isEmpty()) {
-                        dialogbinding.btnAdd.error = "Enter The Text"
+                    if (dialogbinding.etInput.text.isEmpty()) {
+                        dialogbinding.etInput.error = "Enter The Text"
                     } else {
                         userlist.add(dialogbinding.etInput.text.toString())
                         customDialogg.dismiss()
@@ -61,8 +61,8 @@ var userlist=ArrayList<String>()
             val dialogBunding1=CustomDialogUpdateAndDeleteBinding.inflate(layoutInflater)
             customdialog.setContentView(dialogBunding1.root)
             dialogBunding1.btnUpdate.setOnClickListener {
-                if (dialogBunding1.btnUpdate.text.isEmpty()){
-                    dialogBunding1.btnUpdate.error="Enter Your Value "
+                if (dialogBunding1.etUpdate.text.isEmpty()){
+                    dialogBunding1.etUpdate.error="Enter Your Value "
                 }else{
                     userlist.set(i,dialogBunding1.etUpdate.text.toString())
                     customdialog.dismiss()
